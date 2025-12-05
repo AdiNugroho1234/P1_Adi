@@ -1,0 +1,40 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login.section {
+    padding: 60px 0;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+h3 {
+    font-weight: 600;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #2c7be5;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #1a68d1;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+a.text-primary:hover {
+    text-decoration: underline;
+}
