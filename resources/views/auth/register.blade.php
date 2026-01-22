@@ -37,26 +37,35 @@
                             <div class="p-3">
                                 <h4 class="text-muted font-size-18 mb-1 text-center">Free Register</h4>
                                 <p class="text-muted text-center">Get your free Lexa account now.</p>
-                                <form class="form-horizontal mt-4" action="dashboard">
-
+                                <form class="form-horizontal mt-4" action="{{route('register')}}" method="POST">
+                                    @csrf
                                     <div class="mb-3">
-                                        <label for="useremail">Email</label>
-                                        <input type="email" class="form-control" id="useremail" placeholder="Enter email">
+                                        <label for="useremail">Username</label>
+                                        <input type="text" name="name" class="form-control"
+                                            value="{{ old('name') }}" placeholder="Name" />
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="username">Username</label>
-                                        <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                        <label for="username">Email</label>
+                                        <input type="email" name="email" class="form-control"
+                                            value="{{ old('email') }}" placeholder="Email Address" />
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="userpassword">Password</label>
-                                        <input type="password" class="form-control" id="userpassword" placeholder="Enter password">
+                                        <input type="password" name="password" class="form-control"
+                                            placeholder="Password" />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="userpassword">Confirm Password</label>
+                                        <input type="password" name="password_confirmation" class="form-control"
+                                            placeholder="Confirm Password" />
                                     </div>
 
                                     <div class="mb-3 row mt-4">
                                         <div class="col-12 text-end">
-                                            <button class="btn btn-primary w-md waves-effect waves-light" type="">Register</button>
+                                            <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Register</button>
                                         </div>
                                     </div>
 
@@ -70,7 +79,7 @@
                         </div>
                     </div>
                     <div class="mt-5 text-center">
-                        <p>Already have an account ? <a href="dashboard" class="text-primary"> Login </a> </p>
+                        <p>Already have an account ? <a href="pages-login.html" class="text-primary"> Login </a> </p>
                         © <script>
                             document.write(new Date().getFullYear())
                         </script> Lexa <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
@@ -90,6 +99,5 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
 </body>
-
 
 </html>
